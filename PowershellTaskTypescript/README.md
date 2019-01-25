@@ -5,33 +5,34 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 # To Use
 - Make sure you have node.js version 4 or greater installed.  It can be found at https://nodejs.org/
 
-- Once installed, from a command prompt run npm install -g tfx-cli in order to install the CLI.
+- Once installed, you will want to install the CLI, from a command prompt run:
+	- **npm install -g tfx-cli**
 
 - Make sure you have typescript installed.  This can be installed by running:
-	npm install -g typescript
+	- **npm install -g typescript**
 
 - Download the sample.
 
 - In a command prompt, travel to the root directory of the sample.  Travel to the BuildTask folder.
 
 - Run the following command to create a package.json file: 
-	npm init
+	- **npm init**
 	- you can accept all of the default options
 
 - This sample relies on the azure-pipelines-task-lib library.  This can be added by running: 
-	npm install azure-pipelines-task-lib --save
+	- **npm install azure-pipelines-task-lib --save**
 
 - After running this, you should see a node_modules folder created in your BuildTask folder.
 
 - This library provides us access to various APIs that allow us to interact with Azure DevOps\TFS.
 
 - Install the Typescript typings by running the following two commands:
-	npm install @types/node --save-dev
-	npm install @types/q --save-dev
+	- **npm install @types/node --save-dev**
+	- **npm install @types/q --save-dev**
 
 - The next step is to initialize our typescript json file by running:
-	tsc --init
-	- this will create a tsconfig.json file.  By default, it is set to compile to the ES5 standard.  Go
+	- **tsc --init**
+	- this will create a tsconfig.json file.  By default, it is set to compile to the ES5 standard.  You can update to point to ES6 standard if desired.
 
 
 # File Structure
@@ -68,13 +69,10 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 - You will need to have a publishing profile before proceeding
 
 - To compile typescript into javascript, you will want to run the command: 
-	tsc
+	- **tsc**
 
 - From within the root directory, run the following command from command prompt:
-	tfx extension create
-			or
-	tfx extension create --manifest-globs vss-extension.json
-
+	- **tfx extension create** or **tfx extension create --manifest-globs vss-extension.json**
 	- the first command will default to picking vss-extension.json
 	- the second command allows you to specify which extension json file to use in case you have multiple/or use different ones for debugging and production
 
@@ -89,10 +87,10 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 - This task can locally be tested.  Open up Powershell and travel to the root directory\BuildTask folder.
 
 - Run the following command:
-	node index.js
+	- **node index.js**
 	- (this is what the agent will be doing)
 
 - The task will fail and that is because no inputs were supplied and firstname is a required input.  We have the ability to set an input from Powershell:
-	$env:INPUT_FIRSTNAME="Bob"
+	- **$env:INPUT_FIRSTNAME="Bob"**
 
 - Run it again and this time the task will succeed.  You can play with adding in the lastname input as well and removing it.

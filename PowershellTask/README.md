@@ -5,17 +5,20 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script.
 # To Use
 - Make sure you have node.js version 4 or greater installed.  It can be found at https://nodejs.org/
 
-- Once installed, from a command prompt run npm install -g tfx-cli in order to install the CLI.
+- Once installed, you will want to install the CLI, from a command prompt run:
+	- **npm install -g tfx-cli**
 
 - Download the sample.
 
 - This sample relies on the VstsTaskSdk Powershell Module (https://www.powershellgallery.com/packages/VstsTaskSdk/).  In order to install it, open up Powershell, travel to the root directory of the solution, and then into the BuildTask folder.
 
-- First you will want to make a folder where the module is to be saved to: mkdir ps_modules
+- First you will want to make a folder where the module is to be saved to: 
+	- **mkdir ps_modules**
 
 - Travel into the ps_modules directory.
 
-- Now execute: Save-Module -Name VstsTaskSdk -Path .
+- Now execute: 
+	- **Save-Module -Name VstsTaskSdk -Path .**
 
 - This module provides us access to various APIs that allow us to interact with Azure DevOps\TFS.
 
@@ -49,11 +52,7 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script.
 - you will need to have a publishing profile before proceeding
 
 - from within the root directory, run the following command from command prompt:
-
-	tfx extension create
-			or
-	tfx extension create --manifest-globs vss-extension.json
-
+	- **tfx extension create** or **tfx extension create --manifest-globs vss-extension.json**
 	- the first command will default to picking vss-extension.json
 	- the second command allows you to specify which extension json file to use in case you have multiple/or use different ones for debugging and production
 
