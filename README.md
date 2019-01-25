@@ -1,2 +1,13 @@
 # Azure-DevOps-Extension-Samples
-Azure DevOps extension samples
+
+This repository contains various Azure DevOps\TFS Extension samples.
+
+
+# PowershellTask
+
+Sample Build/Release Task extension that calls and runs a powershell script file directly.
+
+
+# PowershellTaskTypescript
+
+Sample Build/Release Task extension that calls and runs a powershell script from typescript.

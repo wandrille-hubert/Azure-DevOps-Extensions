@@ -1,0 +1,42 @@
+﻿{
+    "id": "577f68fa-00c5-419f-804f-bda244b30513",
+    "name": "PowershellTask",
+    "friendlyName": "Powershell Task",
+    "description": "Powershell Task",
+    "helpMarkDown": "",
+    "category": "Build",
+    "author": "wany",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 5
+    },
+    "instanceNameFormat": "Powershell Task Custom",
+    "inputs": [
+        {
+            "name": "firstname",
+            "type": "string",
+            "label": "First Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "What is your first name"
+        },
+		{
+            "name": "lastname",
+            "type": "string",
+            "label": "Last Name",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "What is your last name"
+        }
+    ],
+    "execution": {
+        "PowerShell3": {
+            "target": "script.ps1",
+            "platforms": [
+                "windows"
+            ],
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
