@@ -39,8 +39,8 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 - vss-extension.json:
 	- provides basic information about the extension
 	- you will want to update the publisher to your own.  Information to create your own can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azdevops
-	- more information can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azdevops
 	- there is a flag to make your extension public or private: in order to be able to create public extensions, you will need to have your publishing account verified by Microsoft
+	- more information can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azdevops
 
 - images\logo.png:
 	- picture used as icon for extension, which is set in vss-extension.json
@@ -53,6 +53,7 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 
 - tsconfig.json:
 	- holds typescript arguments, properties and compiler options
+	- more information: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 
 - index.ts:
 	- file that will be executed
@@ -62,7 +63,10 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script called from ty
 
 - script.ps1:
 	- script that is called from within index.ts
-	
+
+- package.json/package-lock.json:
+	- created when npm init is ran
+	- contains list of dependencies and package versions to use
 
 
 # Extension Build And Publish

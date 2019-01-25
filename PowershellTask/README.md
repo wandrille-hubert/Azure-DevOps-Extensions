@@ -27,8 +27,8 @@ Sample Azure DevOps\TFS Extension Task to run a powershell script.
 - vss-extension.json:
 	- provides basic information about the extension
 	- you will want to update the publisher to your own.  Information to create your own can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/publish/overview?view=azdevops
-	- more information can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azdevops
 	- there is a flag to make your extension public or private: in order to be able to create public extensions, you will need to have your publishing account verified by Microsoft
+	- more information can be found at: https://docs.microsoft.com/en-us/azure/devops/extend/develop/manifest?view=azdevops
 
 - images\logo.png:
 	- picture used as icon for extension, which is set in vss-extension.json
