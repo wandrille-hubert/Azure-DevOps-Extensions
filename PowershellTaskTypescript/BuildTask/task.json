@@ -1,0 +1,38 @@
+﻿{
+    "id": "3F1669D1-058B-44B0-A11C-31E4253900FB",
+    "name": "PowershellTaskTypescript",
+    "friendlyName": "Powershell Task Typescript",
+    "description": "Powershell Task Typescript",
+    "helpMarkDown": "",
+    "category": "Build",
+    "author": "wany",
+    "version": {
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 3
+    },
+    "instanceNameFormat": "Powershell Task Ts Custom",
+    "inputs": [
+        {
+            "name": "firstname",
+            "type": "string",
+            "label": "First Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "What is your first name"
+        },
+		{
+            "name": "lastname",
+            "type": "string",
+            "label": "Last Name",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "What is your last name"
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}

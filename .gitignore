@@ -1,3 +1,7 @@
 
 PowershellTask/BuildTask/package.json
 PowershellTask/BuildTask/ps_modules
+PowershellTaskTypescript/BuildTask/ps_modules
+PowershellTaskTypescript/BuildTask/node_modules
+PowershellTaskTypescript/BuildTask/index.js
+PowershellTaskTypescript/BuildTask/.taskkey
